@@ -17,8 +17,6 @@ df.head() # shows the first 5 columns
 Implement code to list the top-3 countries with highest median daily vaccination numbers by considering missing values imputed version of dataset.
 
 ```
-import pandas as pd
-import numpy as np
 df = pd.read_csv('country_vaccination_stats.csv')
 df.nlargest(3, 'daily_vaccinations')
 ```
