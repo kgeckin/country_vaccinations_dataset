@@ -8,7 +8,7 @@ df["daily_vaccinations"]=df["daily_vaccinations"].replace(np.nan, 0).astype(int)
 df.head() # shows the first 5 columns
 
 # Implement code to list the top-3 countries with highest median daily vaccination numbers by considering missing values imputed version of dataset.
-df_data_1.nlargest(3, 'daily_vaccinations')
+df.nlargest(3, 'daily_vaccinations')
 
 # What is the number of total vaccinations done on 1/6/2021 (MM/DD/YYYY) by considering missing values imputed version of dataset?
-df_data_1.loc[df_data_1['date'] == '1/6/2021', 'daily_vaccinations'].sum().astype(int)
+df.loc[df['date'] == '1/6/2021', 'daily_vaccinations'].sum().astype(int)
