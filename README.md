@@ -6,7 +6,6 @@ Note: If a country does not have any valid vaccination number yet, fill it with 
 
 ```
 import pandas as pd
-import numpy as np
 df = pd.read_csv('country_vaccination_stats.csv')
 df["daily_vaccinations"]=df["daily_vaccinations"].replace(np.nan, 0).astype(int)
 df.head() # shows the first 5 columns
